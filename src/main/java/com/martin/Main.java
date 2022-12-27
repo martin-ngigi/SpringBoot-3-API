@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @SpringBootApplication
 @RestController
 public class Main {
@@ -21,9 +23,20 @@ public class Main {
     //http://localhost:8080/jambo
     @GetMapping("/jambo")
     public JamboResponse jambo(){
-        return new JamboResponse("Sijambo");
+                JamboResponse response = new JamboResponse("Sijambo",
+                List.of("Java", "C", "C+"),
+                new Person("Martin", 23, 6000)
+        );
+                return response;
     }
 
     //java equivalent o class, constructor, getter, setter.
-    record JamboResponse(String jambo){}
+    record JamboResponse(String jambo,
+                         List<String> favLanguages,
+                         Person person
+                         ){
+
+    }
+
+    record Person(String name, int age, double savings){}
 }
