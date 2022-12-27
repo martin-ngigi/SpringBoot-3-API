@@ -1,10 +1,9 @@
 package com.martin.customer;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/customers")
@@ -21,5 +20,11 @@ public class CustomerController {
     @PostMapping("/add-customer")
     public void registerNewCustomer(@RequestBody Customer customer){
         customerService.addNewCustomer(customer);
+    }
+
+    //http://localhost:8080/api/v1/customers/customers-list
+    @GetMapping("customers-list")
+    public List<Customer> getAllCustomers(){
+        return  customerService.getCustomers();
     }
 }

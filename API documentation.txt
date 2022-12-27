@@ -7,3 +7,21 @@ body:
     "age": 12
 }
 response: 1
+
+2. GET -> retrieve all customers
+endpoint -> http://localhost:8080/api/v1/customers/customers-list
+response:
+[
+    {
+        "id": 1,
+        "name": "Martin",
+        "email": "martin@gmail.com",
+        "age": 12
+    },
+    {
+        "id": 2,
+        "name": "Ken",
+        "email": "ken@gmail.com",
+        "age": 12
+    }
+]
