@@ -17,4 +17,13 @@ public class Main {
     public String hello(){
         return "Hello, Its Wainaina";
     }
+
+    //http://localhost:8080/jambo
+    @GetMapping("/jambo")
+    public JamboResponse jambo(){
+        return new JamboResponse("Sijambo");
+    }
+
+    //java equivalent o class, constructor, getter, setter.
+    record JamboResponse(String jambo){}
 }
