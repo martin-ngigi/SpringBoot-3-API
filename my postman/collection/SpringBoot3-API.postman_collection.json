@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "4a507691-c668-403f-a540-85756cfa354d",
+		"name": "SpringBoot3-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14699841"
+	},
+	"item": [
+		{
+			"name": "1. Add customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ken\",\r\n    \"email\": \"ken@gmail.com\",\r\n    \"age\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customers/add-customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"add-customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Get all customers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Simon\",\r\n    \"email\": \"simon@gmail.com\",\r\n    \"age\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customers/customers-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"customers-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3 Update customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Simon\",\r\n    \"email\": \"simon@gmail.com\",\r\n    \"age\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customers/update-customer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"update-customer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. delete customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Simon\",\r\n    \"email\": \"simon@gmail.com\",\r\n    \"age\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customers/delete-customer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"delete-customer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

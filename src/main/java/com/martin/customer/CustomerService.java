@@ -76,4 +76,14 @@ public class CustomerService {
         }
         customerRepository.save(customerFromDB);
     }
+
+    public void deleteCustomer(Integer customerId) {
+        boolean exists = customerRepository.existsById(customerId);
+        if (!exists){
+            log.error("Customer with id "+customerId+" does not exist");
+            throw new IllegalStateException("Customer with id "+customerId+" does not exist");
+        }
+        //else
+        customerRepository.deleteById(customerId);
+    }
 }

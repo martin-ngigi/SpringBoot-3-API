@@ -25,3 +25,19 @@ response:
         "age": 12
     }
 ]
+
+3. PUT -> update customer
+endpoint -> http://localhost:8080/api/v1/customers/update-customer/1
+body :
+{
+    "name": "Simon",
+    "email": "simon@gmail.com",
+    "age": 12
+}
+response :
+1
+
+4. DELETE -> delete customer
+endpoint -> http://localhost:8080/api/v1/customers/delete-customer/1
+response :
+1

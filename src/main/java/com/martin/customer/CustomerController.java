@@ -39,4 +39,10 @@ public class CustomerController {
     ){
         customerService.updateCustomer(customerId, customer);
     }
+
+    //http://localhost:8080/api/v1/customers/delete-customer/2
+    @DeleteMapping("/delete-customer/{customerId}")
+    public void deleteCustomer(@PathVariable("customerId") Integer customerId){
+        customerService.deleteCustomer(customerId);
+    }
 }
