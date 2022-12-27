@@ -1,0 +1,8 @@
+#Set server port
+server:
+  port: 8080
+
+# default server is servlet
+spring:
+  main:
+    web-application-type: servlet
